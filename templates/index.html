@@ -1,0 +1,476 @@
+<!doctype html>
+{% load static %}
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title> UNHelp|Offical</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" syle="width:50%"type="image/x-icon" href="{% static 'assets\img\logo/faviconfinal.ico' %}">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/slicknav.css'%}">
+    <link type="text/css"rel="stylesheet" href="{% static 'css/flaticon.css'%}">
+    <link type="text/css"rel="stylesheet" href="{% static 'css/progressbar_barfiller.css'%}">
+    <link type="text/css"rel="stylesheet" href="{% static 'css/gijgo.css'%}">
+    <link type="text/css"rel="stylesheet" href="{% static 'css/animate.min.css'%}">
+    <link type="text/css"rel="stylesheet" href="{% static 'css/animated-headline.css'%}">
+    <link type="text/css"rel="stylesheet" href="{% static 'css/magnific-popup.css'%}">
+    <link type="text/css"rel="stylesheet" href="{% static 'css/fontawesome-all.min.css'%}">
+    <link type="text/css"rel="stylesheet" href="{% static 'css/themify-icons.css'%}">
+    <link type="text/css"rel="stylesheet" href="{% static 'css/slick.css'%}">
+    <link type="text/css"rel="stylesheet" href="{% static 'css/nice-select.css'%}">
+    <link type="text/css"rel="stylesheet" href="{% static 'css/style.css'%}">
+
+</head>
+<body>
+    <!-- ? Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="{% static 'assets\img\logo/logom.png'  %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start -->
+    <header>
+        <!-- Header Start -->
+        <div class="header-area header-transparent">
+            <div class="main-header ">
+                <div class="header-bottom  header-sticky">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <!-- Logo -->
+                            <div class="col-xl-2 col-lg-2">
+                                <div class="logo"style="">
+                                    <a href="{% url 'index'  %}"><img style=" width:50%;"src="{% static 'assets\img\logo/logom.png'  %}" alt=""></a>
+
+                                    </div>
+                            </div>
+                            <div class="col-xl-10 col-lg-10">
+                                <div class="menu-wrapper d-flex align-items-center justify-content-end">
+                                    <!-- Main-menu -->
+                                    <div class="main-menu d-none d-lg-block">
+                                        <nav>
+                                            <ul id="navigation">
+                                                <li><a href="{% url 'index'  %}">ANASAYFA</a></li>
+                                                <li><a href="{% url 'jobs:jobs'  %}">İlanlar</a></li>
+                                                <li><a href="{% url 'help'  %}">Yardım</a></li>
+                                                {% if  request.user.is_authenticated %} <li><a href="{% url 'jobs:dashboard'  %}">İlanlarınız</a></li>
+                                                {% endif %}
+                                                <li><a href="#">Anlaşmalı</a>
+                                                    <ul class="submenu">
+                                                        <li ><a href="{% url 'contracted'  %}"style="font-size: 14px;">Anlaşmalı  İş Yerleri</a></li>
+                                                        <li><a href="{% url 'contracted2'  %}"style="font-size: 14px;">Anlaşmalı Çalışanlar</a></li>
+                                                        <li><a href="{% url 'contractedhelp'  %}"style="font-size: 14px;">Anlaşmalı Olmak İçin</a></li> </ul>
+                                                </li>
+                                                <li><a href="{% url 'contact'  %}">İletişim</a></li>
+                                                <!-- Button -->
+                                                {% if  request.user.is_authenticated %}
+                                                <li class="button-header"><a href="{% url 'user:logout'  %}" class="btn3">Çıkış Yap</a></li>
+
+                                                {% else %}
+                                                <li class="button-header"><a href="{% url 'user:login'  %}" class="btn">Giriş Yap</a></li>
+                                                <li class="button-header margin-left "><a href="{% url 'user:register'  %}" class="btn">Kayıt Ol</a></li>
+
+                                                {% endif %}
+                                                 </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Mobile Menu -->
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    </header>
+    <main>
+        <!-- Slider Area Start-->
+        <div class="slider-area slider-bg ">
+            <div class="slider-active">
+                <!-- Single Slider -->
+                <div class="single-slider d-flex align-items-center slider-height ">
+                    <div class="container">
+                        <div class="row align-items-center justify-content-between">
+                            <div class="col-xl-5 col-lg-5 col-md-9 ">
+                                <div class="hero__caption">
+                                    <span data-animation="fadeInLeft" data-delay=".3s">En Hızlı ve Güvenli Para Kazanmanın Yolu</span>
+                                    <h1 data-animation="fadeInLeft" data-delay=".6s ">Her Açıdan Kolaylık ve Müşteri Memnuniyeti</h1>
+                                    <p data-animation="fadeInLeft" data-delay=".8s">Hazır iş yerleri,hazır çalışanlar,günlük işler,
+                                        günlük işçiler ve acil ihtiyaclarınız tümünü
+                                        tek bir sayfaya taşıdık.</p>
+                                    <!-- Slider btn -->
+                                    <div class="slider-btns">
+                                        <!-- Hero-btn -->
+                                        <a data-animation="fadeInLeft" data-delay="1s" href="{%url 'jobs:jobs'%}" class="btn radius-btn">Şimdi Başlayın</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6">
+                                <div class="hero__img d-none d-lg-block f-right">
+                                    <img src="{% static 'assets\img\hero/hero_right.png'  %}" alt="" data-animation="fadeInRight" data-delay="1s">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Slider -->
+                <div class="single-slider d-flex align-items-center slider-height ">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 col-md-9 ">
+                                <div class="hero__caption">
+                                    <span data-animation="fadeInLeft" data-delay=".3s">En Hızlı ve Güvenli Para Kazanmanın Yolu</span>
+                                    <h1 data-animation="fadeInLeft" data-delay=".6s ">Her Açıdan Kolaylık ve Müşteri Memnuniyeti</h1>
+                                    <p data-animation="fadeInLeft" data-delay=".8s">Hazır iş yerleri,hazır çalışanlar,günlük işler,
+                                        günlük işçiler ve acil ihtiyaclarınız tümünü
+                                        tek bir sayfaya taşıdık.</p>
+                                    <!-- Slider btn -->
+                                    <div class="slider-btns">
+                                        <!-- Hero-btn -->
+                                        <a data-animation="fadeInLeft" data-delay="1s" href="industries.html" class="btn radius-btn">Şimdi Başlayın</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="hero__img d-none d-lg-block f-right">
+                                    <img src="{% static 'assets\img\hero/hero_right.png'  %}" alt="" data-animation="fadeInRight" data-delay="1s">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slider Shape -->
+            <div class="slider-shape d-none d-lg-block">
+                <img class="slider-shape1" src="{% static 'assets\img\hero/top-left-shape.png'  %}" alt="">
+            </div>
+        </div>
+        <!-- Slider Area End -->
+        <!-- Domain-search start -->
+        <div class="domain-search-area section-bg1">
+           <div class="container">
+               <div class="row">
+                   <div class="col-xl-4 col-lg-5">
+                       <h2>Yeni Bir İş Arayın</h2>
+                       <p>Köpek gezdirme,Bebek bakıcılığı,Logo tasarımı,Site tasarımı ve daha bir çoğu:</p>
+                   </div>
+                   <div class="col-xl-8 col-lg-7">
+                    <!--Hero form -->
+                    <form action="#" class="search-box">
+                        <div class="input-form">
+                            <input type="text" name="keyword" placeholder="Bir İş Arayın">
+                            <!-- icon search -->
+                            <div class="search-form">
+                                <button><i class="ti-search"></i></button>
+                            </div>
+                            <!-- icon search -->
+                            <div class="world-form">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- Domain List -->
+                    <div class="single-domain pt-30 pb-30">
+                        <ul>
+
+                        </ul>
+                    </div>
+                    <!-- Domain List  End-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Domain-search End -->
+    <!--? Team -->
+    <section class="team-area section-padding40 section-bg1">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-12">
+                    <div class="section-tittle text-center mb-105">
+                        <h2>En İyi Özelliklerimiz</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="single-cat">
+                        <div class="cat-icon">
+                            <img src="{% static 'assets\img\icon/services1.svg'  %}" alt="">
+                        </div>
+                        <div class="cat-cap">
+                            <h5><a href="#">Paranızın Boşa Gitmeme Garantisi</a></h5>
+                            <p>İki tarafında mağdur olmaması için ücret sitemize yatırılacak iş tamamlandığında işi yapan kişi parasını biz onay aldığımızda alacak</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="single-cat">
+                        <div class="cat-icon">
+                            <img src="{% static 'assets\img\icon/services2.svg'  %}" alt="">
+                        </div>
+                        <div class="cat-cap">
+                            <h5><a href="#">Güvenli ve Garantili</a></h5>
+                            <p>Taraflar anlaşmamızı imzalamak zorunda olacak bu yüzden paranız da işiniz de güvenli olacak</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="single-cat">
+                        <div class="cat-icon">
+                            <img src="{% static 'assets\img\icon/services3.svg'  %}" alt="">
+                        </div>
+                        <div class="cat-cap">
+                            <h5><a href="#">Gizlilik</a></h5>
+                            <p>Verileriniz kimseyle hiçbir şekilde paylaşılmayacak</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="single-cat">
+                        <div class="cat-icon">
+                            <img src="{% static 'assets\img\icon/services4.svg'  %}" alt="">
+                        </div>
+                        <div class="cat-cap">
+                            <h5><a href="#">Hızlı İlan</a></h5>
+                            <p>İlanlar birçok yerde reklamlar yardımıyla kolaylıkla herkese ulaşacak</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="single-cat">
+                        <div class="cat-icon">
+                            <img src="{% static 'assets\img\icon/services5.svg'  %}" alt="">
+                        </div>
+                        <div class="cat-cap">
+                            <h5><a href="#">24/7 Destek</a></h5>
+                            <p>Herhangi bir sorunuz olduğunda her an bize ulaşabilirsiniz</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="single-cat">
+                        <div class="cat-icon">
+                            <img src="{% static 'assets\img\icon/services6.svg'  %}" alt="">
+                        </div>
+                        <div class="cat-cap">
+                            <h5><a href="#">100% Para İadeli</a></h5>
+                            <p>İşiniz yapmış olduğunuz anlaşmaya uygun yapılmadıysa paranızın bir kısmı veya tamamı hesabınıza tekrar yatırılacaktır</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services End -->
+
+
+
+
+    <!-- End ask questions -->
+    <!--? Testimonial Area Start -->
+    <section class="testimonial-area section-bg1">
+        <div class="container" >
+            <div class="testimonial-wrapper">
+                <div class="row align-items-center justify-content-center">
+                    <div class=" col-lg-10 col-md-12 col-sm-11">
+                        <!-- Testimonial Start -->
+
+                        <div class="h1-testimonial-active">
+                            <!-- Single Testimonial -->{% for job in jobs|slice:"4" %}
+                            <div class="single-testimonial text-center mt-55">
+                                <div class="testimonial-caption">
+                                    <img src="{% static 'assets\img\icon/quotes-sign.png'  %}" alt="" class="quotes-sign">
+                                    <p>{{job.content|safe}}</p>
+                                </div>
+                                <!-- founder -->
+                                <div class="testimonial-founder d-flex align-items-center justify-content-center">
+                                    <div class="founder-img">
+                                        <img src="{% static 'assets\img\icon/testimonial.png'  %}" alt="">
+                                    </div>
+                                    <div class="founder-text">
+                                        <span>{{job.author.username}}</span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                            <!-- Single Testimonial -->
+
+                        </div>
+                        <!-- Testimonial End -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--? Testimonial Area End -->
+</main>
+<footer>
+    <div class="footer-wrappr " data-background="{% static 'assets\img\gallery/footer-bg.png'  %}">
+        <div class="footer-area footer-padding ">
+            <div class="container">
+                <div class="row d-flex justify-content-between">
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-footer-caption mb-50">
+                            <!-- logo -->
+                            <div class="footer-logo mb-25">
+                                <a href="index.html"><img style=" width:50%;"src="{% static 'assets\img\logo/logom.png'  %}" alt=""></a>
+              </div>
+              <div class="footer-tittle mb-50">
+                <p>Güncellemelerle İlgili Bilgilerden Haberdar Olmak İçin Abone Olun</p>
+              </div>
+              <!-- Form -->
+              <div class="footer-form">
+                <div id="mc_embed_signup">
+                  <form target="_blank" action="" method="get" class="subscribe_form relative mail_part" novalidate="true">
+                    <input type="email" name="EMAIL" id="newsletter-form-email" placeholder=" Email Adresiniz " class="placeholder hide-on-focus" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your email address'">
+                    <div class="form-icon">
+                      <button type="submit" name="submit" id="newsletter-submit" class="email_icon newsletter-submit button-contactForm">
+                        Abone Ol
+                                            </button>
+                                        </div>
+                                        <div class="mt-10 info"></div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- social -->
+                            <div class="footer-social mt-50">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1"></div>
+                    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-5">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>Uygulamamız</h4>
+                                <ul>
+                                    <li><a href="#">Neden bizi seçmelisiniz</a></li>
+                                    <li><a href="#">Gözlenim</a></li>
+                                    <li><a href="#">Müşteriler</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                    <li><a href="#">Kariyerimiz</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-5">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>Ürünler</h4>
+                                <ul>
+                                    <li><a href="#">Neden bizi seçmelisiniz</a></li>
+                                    <li><a href="#">Gözlenim</a></li>
+                                    <li><a href="#">Müşteriler</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                    <li><a href="#">Kariyerimiz</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-5">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>Destek</h4>
+                                <ul>
+                                    <li><a href="#">Teknoloji</a></li>
+                                    <li><a href="#">Ürünler</a></li>
+                                    <li><a href="#">Müşteriler</a></li>
+                                    <li><a href="#">Kalite</a></li>
+                                    <li><a href="#">Satış</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer-bottom area -->
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="footer-border">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="footer-copy-right text-center">
+                                <p>
+
+
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+  <!-- Scroll Up -->
+  <div id="back-top" >
+    <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+</div>
+
+<!-- JS here -->
+{% load static %}
+
+<script src="{% static 'js/modernizr-3.5.0.min.js'%}"></script>
+<!-- Jquery, Popper, Bootstrap -->
+<script src="{% static 'js/jquery-1.12.4.min.js'%}"></script>
+<script src="{% static 'js/popper.min.js'%}"></script>
+<script src="{% static 'js/bootstrap.min.js'%}"></script>
+<!-- Jquery Mobile Menu -->
+<script src="{% static 'js/jquery.slicknav.min.js'%}"></script>
+
+<!-- Jquery Slick , Owl-Carousel Plugins -->
+<script src="{% static 'js/owl.carousel.min.js'%}"></script>
+<script src="{% static 'js/slick.min.js'%}"></script>
+<!-- One Page, Animated-HeadLin -->
+<script src="{% static 'js/wow.min.js'%}"></script>
+<script src="{% static 'js\animated.headline.js'%}"></script>
+<script src="{% static 'js/jquery.magnific-popup.js'%}"></script>
+
+<!-- Date Picker -->
+<script src="{% static 'js/gijgo.min.js'%}"></script>
+
+<!-- Video bg -->
+<script src="{% static 'js/jquery.vide.js'%}"></script>
+
+<!-- Nice-select, sticky -->
+<script src="{% static 'js/jquery.nice-select.min.js'%}"></script>
+<script src="{% static 'js/jquery.sticky.js'%}"></script>
+<!-- Progress -->
+<script src="{% static 'js/jquery.barfiller.js'%}"></script>
+
+<!-- counter , waypoint,Hover Direction -->
+<script src="{% static 'js/jquery.counterup.min.js'%}"></script>
+<script src="{% static 'js/waypoints.min.js'%}"></script>
+<script src="{% static 'js/jquery.countdown.min.js'%}"></script>
+<script src="{% static 'js/hover-direction-snake.min.js'%}"></script>
+
+<!-- contact js -->
+<script src="{% static 'js/contact.js'%}"></script>
+<script src="{% static 'js/jquery.form.js'%}"></script>
+<script src="{% static 'js/jquery.validate.min.js'%}"></script>
+<script src="{% static 'js/mail-script.js'%}"></script>
+<script src="{% static 'js/jquery.ajaxchimp.min.js'%}"></script>
+
+<!-- Jquery Plugins, main Jquery -->
+<script src="{% static 'js/plugins.js'%}"></script>
+<script src="{% static 'js/main.js'%}"></script>
+
+
+</body>
+</html>
